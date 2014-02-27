@@ -17,5 +17,13 @@ def test_flash():
     eq_(True, True)
 
 def test_boot():
-    ret = the_parser.GetLogResult('INSTALLATION', 'BOOT')
-    eq_(ret, True)
+    guest_count = int(os.getenv('GUEST_COUNT'))
+    print "guest_count" + str(guest_count)
+    guest_type = os.getenv('CI_BUILD_DIR')
+    guests = x.split("_")
+    
+    for n in range(0, guest_count):
+        guest_boot = guests[n].upper() + "-BOOT"
+        print guest_boot
+        ret = the_parser.GetLogResult('INSTALLATION', guest_boot)
+        eq_(ret, True)
