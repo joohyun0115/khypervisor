@@ -64,4 +64,5 @@ def RunSimulator(duration):
     return True
 
 if __name__ == '__main__':
-    RunSimulator(30)
+    time = sys.argv[1]
+    RunSimulator(int(time))
