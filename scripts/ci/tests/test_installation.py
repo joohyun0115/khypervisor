@@ -20,7 +20,7 @@ def test_boot():
     guest_count = int(os.getenv('GUEST_COUNT'))
     print "guest_count" + str(guest_count)
     guest_type = os.getenv('CI_BUILD_DIR')
-    guests = x.split("_")
+    guests = guest_type.split("_")
     
     for n in range(0, guest_count):
         guest_boot = guests[n].upper() + "-BOOT"
