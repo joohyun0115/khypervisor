@@ -19,7 +19,6 @@ void scheduler_test_switch_to_next_guest(void *pdata)
     uart_print("\n\r");
     uart_print("cnth_tval:");
     uart_print_hex32(tval);
-    uart_print("\n\r");
 #endif
     /*
      * Note: As of context_switchto() and context_perform_switch()
