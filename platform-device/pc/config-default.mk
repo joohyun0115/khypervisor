@@ -14,7 +14,7 @@
 ###########################################################################
 # Main options
 #
-CROSS_COMPILE	?= arm-linux-gnueabihf-
+CROSS_COMPILE	?=
 ARCH		?= x86_64
 
 CPPFLAGS	+= -g
